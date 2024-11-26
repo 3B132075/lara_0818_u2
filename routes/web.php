@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
- Route::get('home', function () {
-     return view('home.index');
- });
+use App\Http\Controllers\HelloController;
+
+Route::get('hello/{name?}', [HelloController::class, 'index']) -> name('hello.index');
+
+// Route::get('home', function () {
+//     return view('home.index');
+// });
 
 
