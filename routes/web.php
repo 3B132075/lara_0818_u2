@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('home', function () {
-    return view('home.index');
-});
+// Route::get('home', function () {
+//     return view('home.index');
+// });
+
+class HomeController extends Controller
+{
+    public function index()
+    {
+        returnview('home.index');
+    }
+}
